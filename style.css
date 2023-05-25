@@ -61,7 +61,7 @@ input[type="password"]::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
-button {
+button, a {
     padding: 15px;
     background-color: #2272b5;
     color: #fff;
@@ -72,21 +72,33 @@ button {
     transition: background-color 0.3s ease;
     box-shadow: 0px 0px 20px #2272b5;
     text-decoration: none;
+    flex-direction: row;
 }
 
-button:hover {
+button:hover, a:hover {
     background-color: #2196f3;
     box-shadow: 0px 0px 20px #2196f3;
 }
 
-button:active {
+button:active, a:active {
     background-color: #2272b5;
     box-shadow: 0px 0px 20px #2272b5;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
+.a-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 94%;
 }
 
 .message {
@@ -95,3 +107,4 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+
