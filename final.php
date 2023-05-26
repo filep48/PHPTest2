@@ -54,4 +54,5 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
         <?php echo implode(', ', $_SESSION['select']); ?></p>
     </div>
 </body>
+
 </html>
