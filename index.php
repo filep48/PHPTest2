@@ -6,7 +6,7 @@ $admin_password = 'admin';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    
     if ($username === $admin_username && $password === $admin_password) {
         $_SESSION['username'] = $username;
         header('Location: form.php');
@@ -15,9 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = 'Usuario o contraseña incorrectos.';
     }
 }
+function isUserLoggedIn() {
+    return isset($_SESSION['username']) && !empty($_SESSION['username']);
+}
 
-if (isset($_SESSION['username'])) {
-    header('Location: form.php');
+if (isUserLoggedIn()) {
+    header('Location: form.php?message=Inicio de sesión exitoso');
     exit();
 }
 ?>
@@ -31,6 +34,7 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <header></header>
     <div class = "login-container">
         <h1>Iniciar sesión</h1>
         <?php  if (isset($message)) : ?>

@@ -16,14 +16,14 @@ session_destroy();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Despedida</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="login-container">
+    <div class="login-container" class="despedida">
         <h1>Despedida</h1>
         <p>Hasta otra! <?php echo $usuari; ?>.</p>
         <a href="index.php">Volver al inicio</a>

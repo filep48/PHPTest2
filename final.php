@@ -22,7 +22,7 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>Final</title>
     <meta charset="UTF-8">
@@ -30,27 +30,27 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
 </head>
 <body>
     <header>
-        <h1>Benvingut, <?php echo $_SESSION['usuari']; ?>!</h1>
-        <a href="?logout=true">Tanca sessió</a>
+        <h1>Bienvenido, <?php echo $_SESSION['username']; ?>!</h1>
+        <a href="?logout=true">Cerrar sesión</a>
     </header>
 
-    <h1>Dades del formulari:</h1>
+    <h1>Datos del formulario:</h1>
     <div>
-        <p>Correu electrònic: <?php echo $_SESSION['email']; ?></p>
+        <p>Correo electronico: <?php echo $_SESSION['email']; ?></p>
     </div>
     <div>
         <p>Data: <?php echo $_SESSION['date']; ?></p>
     </div>
     <div>
-        <p>Opció seleccionada:
+        <p>Opción seleccionada:
         <?php echo $_SESSION['radio']; ?></p>
     </div>
     <div>
-        <p>Opcions seleccionades:
+        <p>Opciones del radio seleccionada s:
         <?php echo implode(', ', $_SESSION['checkbox']); ?></p>
     </div>
     <div>
-        <p>Opcions del select:
+        <p>Opciones del select:
         <?php echo implode(', ', $_SESSION['select']); ?></p>
     </div>
 </body>

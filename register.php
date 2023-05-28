@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //Guardado de datos en la sesion
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    
     header('Location: form.php?message=Registro exitoso');
     exit();
 }
@@ -22,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <header></header>
     <div class="login-container">
         <h1>Registro de Usuario</h1>
         <form method="POST" action="">
