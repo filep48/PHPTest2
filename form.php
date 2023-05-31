@@ -1,7 +1,5 @@
 <?php
 session_start();
-//añadir el archivo index.php
-
 
 // Comprobar si el usuario ha iniciado sesión
 if (!isset($_SESSION['username'])) {
