@@ -23,10 +23,13 @@ session_destroy();
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="login-container" class="despedida">
+    <header></header>
+    <div class="login-container">
         <h1>Despedida</h1>
-        <p>Hasta otra! <?php echo $usuari; ?>.</p>
-        <a href="index.php">Volver al inicio</a>
+        <div class="despedida">
+            <p>Hasta otra, <?php echo $usuari; ?>!</p>
+        </div>
+        <a href="index.php" class="register">Volver al inicio</a>
     </div>
 </body>
 </html>

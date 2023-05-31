@@ -96,6 +96,7 @@ button:active, a:active {
     flex-direction: column;
     width: 100%;
 }
+
 .register{
     display: flex;
     justify-content: center;
